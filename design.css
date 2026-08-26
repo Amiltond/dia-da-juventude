@@ -30,7 +30,7 @@ body{
 }
 
 .hero-image{
-    width: min(900px, 75vw);
+    width: min(900px, 100%);
     height: auto;
     border-radius: 6px;
     box-shadow: 0 20px 40px -18px rgba(110, 20, 20, 0.35);
