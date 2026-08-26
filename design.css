@@ -1,0 +1,225 @@
+:root{
+    --paper: #faf6ee;
+    --red: #8a1c1c;
+    --red-deep: #6e1414;
+    --gold: #c9a227;
+    --ink: #2b2118;
+    --ink-soft: #6b5f4e;
+    --border-color: #e6dcc8;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+    position: relative;
+    margin: 0 90px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+}
+/* ---------- CONTEÚDO ---------- */
+.pagina{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 6vh 1rem 8vh;
+}
+
+.hero{
+    text-align: center;
+    margin-bottom: 6vh;
+}
+
+.hero-image{
+    width: min(900px, 75vw);
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 20px 40px -18px rgba(110, 20, 20, 0.35);
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+h1{
+    font-family: "sanvito-pro", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--red-deep);
+    margin: 0 0 .8rem;
+    text-align: left;
+}
+
+.subtitulo{
+    font-family: "sanvito-pro", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+   
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* ---------- INFO ---------- */
+.info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 6vh;
+}
+
+@media (max-width: 700px){
+    .info{ grid-template-columns: 1fr; }
+}
+
+.info-card{
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1.6rem 1.3rem;
+    text-align: center;
+}
+
+.info-label{
+    font-size: .7rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: .6rem;
+}
+
+.info-valor{
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.info-valor small{
+    color: var(--ink-soft);
+    font-size: .82rem;
+}
+
+.info-link{
+    display: inline-block;
+    margin-top: .6rem;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--red);
+    border-bottom: 1px solid var(--gold);
+}
+
+/* ---------- CARDS ---------- */
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+}
+
+@media (max-width: 700px){
+    .cards{ grid-template-columns: 1fr; }
+}
+
+.card{
+    display: block;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2rem 1.6rem;
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.card:hover{
+    transform: translateY(-4px);
+    border-color: var(--red);
+    box-shadow: 0 16px 30px -20px rgba(138, 28, 28, 0.4);
+}
+
+.card h3{
+    font-family: "sanvito-pro", serif;
+    font-weight: 700;
+    color: var(--red-deep);
+    margin: 0 0 .6rem;
+}
+
+.card p{
+    color: var(--ink-soft);
+    font-size: .92rem;
+    line-height: 1.55;
+    margin: 0 0 1.2rem;
+}
+
+.card-seta{
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--red);
+}
+
+.borda-lateral-wrap{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.borda-esquerda{ left: -90px; }
+.borda-direita{ right: -90px; }
+
+.borda-lateral{
+    height: 60px;
+    background-color: var(--red);
+
+    -webkit-mask-image: url('images/borda-lateral.png');
+    mask-image: url('images/borda-lateral.png');
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+    -webkit-mask-size: auto 100%;
+    mask-size: auto 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 100vh;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.canto{
+    position: fixed;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url('images/borda.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 11;
+}
+
+.canto-topo-esquerdo{ left: 0; }
+.canto-topo-direito{ right: 0; }
+
+.rodape{
+    text-align: center;
+    padding: 3rem 1rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4vh;
+}
+
+.rodape-titulo{
+    font-family: "sanvito-pro", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--red-deep);
+    font-size: 1.2rem;
+    margin: 0 0 .5rem;
+}
+
+.rodape-org{
+    font-size: .82rem;
+    color: var(--ink-soft);
+    margin: 0;
+}

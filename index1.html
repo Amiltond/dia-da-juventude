@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/hjk8hqt.css">
+    <link rel="stylesheet" href="design.css">
+    <title>Encontrão da Juventude</title>
+</head>
+<body>
+    <div class="borda-lateral-wrap borda-esquerda">
+        <div class="borda-lateral"></div>
+    </div>
+    <div class="borda-lateral-wrap borda-direita">
+        <div class="borda-lateral"></div>
+    </div>
+
+    <main class="pagina">
+
+        <section class="hero">
+            <img class="hero-image" src="images/WhatsApp Image 2026-08-25 at 18.34.57.jpeg" alt="São Pier Giorgio Frassati">
+            <h1>Encontrão da Juventude</h1>
+            <p class="subtitulo">Inspirados pela vida de São Pier Giorgio Frassati, um dia inteiro de fé, comunidade e caminhada.</p>
+        </section>
+
+        <section class="info">
+            <div class="info-card">
+                <div class="info-label">Horário</div>
+                <div class="info-valor">8h40 às 19h</div>
+                <br>
+                <div class="info-label">Data</div>
+                <div class="info-valor">20/08 (domingo)</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Local</div>
+                <div class="info-valor">Centro Pastoral Padre João Correia de Aquino<br><small>Cohabinal, Parnamirim &#8211; RN</small></div>
+                <a class="info-link" href="https://maps.app.goo.gl/WugkyMv5iyrKzD4f6?g_st=ic" target="_blank" rel="noopener noreferrer">Ver no mapa</a>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Divulgação</div>
+                <div class="info-valor">Nosso Instagram</div>
+                <a class="info-link" href="https://instagram.com/levanta.te_juventude" target="_blank" rel="noopener noreferrer">@levanta.te_juventude</a>
+            </div>
+        </section>
+
+        <section class="cards">
+            <a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSes8aKfBAfil0rzfM6DSkEBExvmCWasYKiaVZSsSzWLvAntSw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                <h3>Formulário de resposta</h3>
+                <p>Confirme sua presença respondendo ao formulário de inscrição.</p>
+                <span class="card-seta">Preencher agora &#8594;</span>
+            </a>
+            <a class="card" href="" target="_blank" rel="noopener noreferrer">
+                <h3>Termo de autorização</h3>
+                <p>Baixe, imprima e assine o termo (Responsável)</p>
+                <span class="card-seta">Baixar termo &#8594;</span>
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape-org">Setor Juventude São Miguel Arcanjo &#8226; Paróquia São Miguel Arcanjo &#8226; Arquidiocese de Natal, RN</p>
+    </footer>
+
+    <script>
+        function ajustarBordas(){
+            document.querySelectorAll('.borda-lateral-wrap').forEach(wrap => {
+                const altura = wrap.offsetHeight;
+                wrap.querySelector('.borda-lateral').style.width = altura + 'px';
+            });
+        }
+        window.addEventListener('load', ajustarBordas);
+        window.addEventListener('resize', ajustarBordas);
+    </script>
+</body>
+</html>
