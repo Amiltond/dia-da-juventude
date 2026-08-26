@@ -188,6 +188,10 @@ h1{
     transform: translate(-50%, -50%) rotate(90deg);
 }
 
+.borda-direita .borda-lateral{
+    transform: translate(-50%, -50%) scaleX(-1) rotate(90deg);
+}
+
 /* ---------- RODAPÉ ---------- */
 .rodape{
     text-align: center;
